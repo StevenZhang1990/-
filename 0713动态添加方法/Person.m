@@ -19,7 +19,7 @@
 //判断实例方法是否存在
 +(BOOL)resolveInstanceMethod:(SEL)sel {
     
-    class_addMethod(self, sel, (IMP)testDemo, "v@:@");
+    class_addMethod(self, sel, (IMP)testDemo, "v@:@");//如果找不到就执行testDemo方法
     
     return [super resolveInstanceMethod:sel];
 }
